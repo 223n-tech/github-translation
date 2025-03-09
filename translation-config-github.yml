@@ -1,7 +1,7 @@
 site: github.com
 language: 日本語
 description: GitHub UIの日本語翻訳
-version: 0.8.0
+version: 0.9.0
 author: 223n
 last_updated: '2025-03-09'
 
@@ -286,6 +286,9 @@ translations:
   - original: Edit Pins
     translated: ピンを編集
     context: コード
+  - original: "Files"
+    translated: "ファイル"
+    context: "コード"
   
   # 正規表現パターン（特定のパターンに一致するテキストを翻訳）
   # Issue番号の表示
