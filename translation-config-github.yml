@@ -1,10 +1,35 @@
 site: github.com
 language: 日本語
 description: GitHub UIの日本語翻訳
-version: 0.7.0
+version: 0.8.0
 author: 223n
 last_updated: '2025-03-09'
+
+# context設定の説明:
+# 
+# contextは翻訳対象の場所や状況を指定するための重要な設定です。
+# 同じテキストでも表示場所によって翻訳を変え分けたい場合に有効です。
+# 
+# 主要なcontext値:
+# - メインナビゲーション: ヘッダー部分のグローバルナビゲーション
+# - リポジトリタブ: リポジトリページのタブメニュー
+# - プロフィール: ユーザープロフィールページの要素
+# - アクションタブ: Actionsページのタブ
+# - プロジェクトタブ: Projectsページのタブ
+# - ボタン: 各種ボタン要素
+# - 特殊要素: 特別な処理が必要なUI要素
+# - 課題表示: Issue関連の表示
+# - ラベル: ラベル表示テキスト
+# - 検索条件: 検索フィルター関連
+# - コード: コードビュー関連
+# - ファイルメニュー: ファイル操作メニュー
+# - 日時表示: 日付や時間の表示形式
+# - 文字列: 一般的なテキスト
+#
+# context値は空文字列("")にもできます。その場合は全ての場所に適用されます。
+
 translations:
+  # メインナビゲーション（ヘッダー部分）
   - original: Pull requests
     translated: プルリクエスト
     context: メインナビゲーション
@@ -17,6 +42,14 @@ translations:
   - original: Explore
     translated: 探索
     context: メインナビゲーション
+  - original: Notifications
+    translated: 通知
+    context: メインナビゲーション
+  - original: New
+    translated: 新規作成
+    context: メインナビゲーション
+  
+  # リポジトリページのタブ
   - original: Code
     translated: コード
     context: リポジトリタブ
@@ -41,18 +74,33 @@ translations:
   - original: Settings
     translated: 設定
     context: リポジトリタブ
+  - original: Discussions
+    translated: ディスカッション
+    context: リポジトリタブ
+  
+  # アクションタブ
   - original: Workflows
     translated: ワークフロー
     context: アクションタブ
   - original: Runs
     translated: 実行履歴
     context: アクションタブ
+  - original: Artifacts
+    translated: 成果物
+    context: アクションタブ
+  - original: Caches
+    translated: キャッシュ
+    context: アクションタブ
+  
+  # プロジェクトタブ
   - original: Projects (classic)
     translated: プロジェクト(クラシック)
     context: プロジェクトタブ
   - original: Projects (beta)
     translated: プロジェクト(ベータ)
     context: プロジェクトタブ
+  
+  # プロフィールページ
   - original: Overview
     translated: 概要
     context: プロフィール
@@ -74,6 +122,11 @@ translations:
   - original: Following
     translated: フォロー中
     context: プロフィール
+  - original: Sponsoring
+    translated: スポンサー中
+    context: プロフィール
+  
+  # 各種ボタン
   - original: New
     translated: 新規
     context: ボタン
@@ -104,6 +157,38 @@ translations:
   - original: Edit profile
     translated: プロフィールを編集
     context: ボタン
+  - original: New Issue
+    translated: 新しい課題
+    context: ボタン
+  - original: New Label
+    translated: 新しいラベル
+    context: ボタン
+  - original: Show more activity
+    translated: さらに表示
+    context: ボタン
+  - original: Learn more
+    translated: 詳細を見る
+    context: ボタン
+  - original: Sort
+    translated: 並び順
+    context: ボタン
+  - original: Create list
+    translated: リストを作成
+    context: ボタン
+  - original: Starred
+    translated: お気に入り追加済み
+    context: ボタン
+  - original: Loading
+    translated: 読み込み中
+    context: ボタン
+  - original: Unwatch
+    translated: ウォッチ中
+    context: ボタン
+  - original: Create new...
+    translated: 新規作成...
+    context: ボタン
+  
+  # 特殊要素
   - original: Actions
     translated: アクション
     context: 特殊要素
@@ -122,76 +207,39 @@ translations:
   - original: Contribution activity
     translated: 貢献活動
     context: 特殊要素
-  - original: 'Issue #(\d+)'
-    translated: '課題 #$1'
-    context: 課題表示
-    regex: true
-  - original: (\d+) commits?
-    translated: $1 コミット
-    context: コミット数
-    regex: true
-  - original: (\d+) contributions? in the last year
-    translated: '昨年の貢献数: $1'
-    context: プロフィールページ
-    regex: true
-  - original: ([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)#(\d+)
-    translated: $1/$2 課題#$3
-    context: 課題リファレンス
-    regex: true
-  - original: Created (\d+) days? ago
-    translated: $1 日前に作成
-    context: 日時表示
-    regex: true
-  - original: Last updated (\w+ \d+, \d+)
-    translated: '最終更新: $1'
-    context: 日時表示
-    regex: true
+  - original: Lists
+    translated: リスト
+    context: 特殊要素
+  
+  # ファイルメニュー
   - original: Copy path
     translated: パスをコピー
     context: ファイルメニュー
   - original: Copy permalink
     translated: 永続リンクをコピー
     context: ファイルメニュー
-  - original: Show more activity
-    translated: さらに表示
-    context: ボタン
-  - original: Learn more
-    translated: 詳細を見る
-    context: ボタン
-  - original: Sort
-    translated: 並び順
-    context: ボタン
-  - original: Create list
-    translated: リストを作成
-    context: ボタン
-  - original: Lists
-    translated: リスト
-    context: 特殊要素
-  - original: Starred
-    translated: お気に入り追加済み
-    context: ボタン
-  - original: Loading
-    translated: 読み込み中
-    context: ボタン
+  - original: Raw
+    translated: 生データ
+    context: ファイルメニュー
+  - original: Blame
+    translated: 注釈
+    context: ファイルメニュー
+  - original: History
+    translated: 履歴
+    context: ファイルメニュー
+  
+  # 通知や条件付きメッセージ
   - original: Seeing something unexpected?
     translated: 予期しない出来事が発生しましたか？
     context: ラベル
   - original: Take a look at the
     translated: こちらをご覧ください
     context: ラベル
-  - original: New Issue
-    translated: 新しい課題
-    context: ボタン
+
+  # イシュー関連
   - original: Labels
     translated: ラベル
     context: ボタン
-  - original: New Label
-    translated: 新しいラベル
-    context: ボタン
-  - original: (\d+) labels
-    translated: ラベル数：$1
-    context: ラベル
-    regex: true
   - original: Milestones
     translated: マイルストーン
     context: ボタン
@@ -201,6 +249,11 @@ translations:
   - original: Filters
     translated: フィルター
     context: コンボボックス
+  - original: There aren't any open pull requests.
+    translated: 開かれているプルリクエストはありません。
+    context: 文字列
+
+  # 検索条件
   - original: Author
     translated: 作成者
     context: 検索条件
@@ -210,49 +263,124 @@ translations:
   - original: Assignee
     translated: 担当者
     context: 検索条件
-  - original: There aren’t any open pull requests.
-    translated: 開かれているプルリクエストはありません。
-    context: 文字列
-  - original: (\d+) Open
-    translated: 開かれている（$1件）
-    context: プルリクエスト
-    regex: true
-  - original: (\d+) Closed
-    translated: 閉じられている（$1件）
-    context: プルリクエスト
-    regex: true
-  - original: (\d+) stars
-    translated: $1 お気に入り
-    context: コード
-    regex: true
-  - original: (\d+) forks
-    translated: $1 フォーク
-    context: コード
-    regex: true
-  - original: (\d+) watching
-    translated: $1 ウォッチ
-    context: コード
-    regex: true
-  - original: (\d+) Branch
-    translated: $1 ブランチ
-    context: コード
-    regex: true
-  - original: (\d+) Tags
-    translated: $1 タグ
-    context: コード
-    regex: true
-  - original: Activity
-    translated: 活動状況
-    context: コード
+  - original: Repository
+    translated: リポジトリ
+    context: 検索条件
+  - original: Project
+    translated: プロジェクト
+    context: 検索条件
+  - original: Milestone
+    translated: マイルストーン
+    context: 検索条件
+  
+  # コードビュー
   - original: Public repository
     translated: 公開リポジトリー
     context: コード
   - original: Private repository
     translated: 非公開リポジトリー
     context: コード
+  - original: Activity
+    translated: 活動状況
+    context: コード
   - original: Edit Pins
     translated: ピンを編集
-    context: ボタン
-  - original: Unwatch
-    translated: ウォッチ中
-    context: ボタン
+    context: コード
+  
+  # 正規表現パターン（特定のパターンに一致するテキストを翻訳）
+  # Issue番号の表示
+  - original: 'Issue #(\d+)'
+    translated: '課題 #$1'
+    context: 課題表示
+    regex: true
+  
+  # コミット数
+  - original: (\d+) commits?
+    translated: $1 コミット
+    context: コミット数
+    regex: true
+  
+  # 貢献数
+  - original: (\d+) contributions? in the last year
+    translated: '昨年の貢献数: $1'
+    context: プロフィールページ
+    regex: true
+  
+  # リポジトリへの課題参照
+  - original: ([A-Za-z0-9_-]+)/([A-Za-z0-9_-]+)#(\d+)
+    translated: $1/$2 課題#$3
+    context: 課題リファレンス
+    regex: true
+  
+  # 作成日時
+  - original: Created (\d+) days? ago
+    translated: $1 日前に作成
+    context: 日時表示
+    regex: true
+  
+  # 最終更新日時
+  - original: Last updated (\w+ \d+, \d+)
+    translated: '最終更新: $1'
+    context: 日時表示
+    regex: true
+  
+  # ラベル数
+  - original: (\d+) labels
+    translated: ラベル数：$1
+    context: ラベル
+    regex: true
+  
+  # プルリクエスト状態
+  - original: (\d+) Open
+    translated: 開かれている（$1件）
+    context: プルリクエスト
+    regex: true
+  
+  - original: (\d+) Closed
+    translated: 閉じられている（$1件）
+    context: プルリクエスト
+    regex: true
+  
+  # リポジトリ統計情報
+  - original: (\d+) stars
+    translated: $1 お気に入り
+    context: コード
+    regex: true
+  
+  - original: (\d+) forks
+    translated: $1 フォーク
+    context: コード
+    regex: true
+  
+  - original: (\d+) watching
+    translated: $1 ウォッチ
+    context: コード
+    regex: true
+  
+  - original: (\d+) Branch
+    translated: $1 ブランチ
+    context: コード
+    regex: true
+  
+  - original: (\d+) Tags
+    translated: $1 タグ
+    context: コード
+    regex: true
+  
+  # コンテキスト無視の全体適用翻訳（全ての場所で使用される共通の翻訳）
+  # コンテキストを空文字列("")にするとすべての場所で適用されます
+  - original: All
+    translated: すべて
+    context: ""
+  
+  - original: None
+    translated: なし
+    context: ""
+  
+  - original: Optional
+    translated: 任意
+    context: ""
+  
+  - original: Required
+    translated: 必須
+    context: ""
