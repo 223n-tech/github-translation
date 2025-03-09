@@ -1,7 +1,7 @@
 site: github.com
 language: 日本語
 description: GitHub UIの日本語翻訳
-version: 0.5.0
+version: 0.6.0
 author: 223n
 last_updated: '2025-03-09'
 translations:
@@ -57,7 +57,7 @@ translations:
     translated: 概要
     context: プロフィール
   - original: Repositories
-    translated: リポジトリ
+    translated: リポジトリー
     context: プロフィール
   - original: Projects
     translated: プロジェクト
@@ -179,3 +179,74 @@ translations:
   - original: Take a look at the
     translated: こちらをご覧ください
     context: ラベル
+  - original: New Issue
+    translated: 新しい課題
+    context: ボタン
+  - original: Labels
+    translated: ラベル
+    context: ボタン
+  - original: New Label
+    translated: 新しいラベル
+    context: ボタン
+  - original: (\d+) labels
+    translated: ラベル数：$1
+    context: ラベル
+    regex: true
+  - original: Milestones
+    translated: マイルストーン
+    context: ボタン
+  - original: Search all labels
+    translated: すべてのラベルから検索
+    context: 文字列
+  - original: Filters
+    translated: フィルター
+    context: コンボボックス
+  - original: Author
+    translated: 作成者
+    context: 検索条件
+  - original: Label
+    translated: ラベル
+    context: 検索条件
+  - original: Assignee
+    translated: 担当者
+    context: 検索条件
+  - original: There aren’t any open pull requests.
+    translated: 開かれているプルリクエストはありません。
+    context: 文字列
+  - original: (\d+) Open
+    translated: 開かれている（$1件）
+    context: プルリクエスト
+    regex: true
+  - original: (\d+) Closed
+    translated: 閉じられている（$1件）
+    context: プルリクエスト
+    regex: true
+  - original: (\d+) stars
+    translated: $1 お気に入り
+    context: コード
+    regex: true
+  - original: (\d+) forks
+    translated: $1 フォーク
+    context: コード
+    regex: true
+  - original: (\d+) watching
+    translated: $1 ウォッチ
+    context: コード
+    regex: true
+  - original: (\d+) Branch
+    translated: $1 ブランチ
+    context: コード
+    regex: true
+  - original: (\d+) Tags
+    translated: $1 タグ
+    context: コード
+    regex: true
+  - original: Activity
+    translated: 活動状況
+    context: コード
+  - original: Public repository
+    translated: 公開リポジトリー
+    context: コード
+  - original: Private repository
+    translated: 非公開リポジトリー
+    context: コード
