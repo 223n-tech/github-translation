@@ -1,7 +1,7 @@
 site: github.com
 language: 日本語
 description: GitHub UIの日本語翻訳
-version: 0.6.0
+version: 0.7.0
 author: 223n
 last_updated: '2025-03-09'
 translations:
@@ -250,3 +250,9 @@ translations:
   - original: Private repository
     translated: 非公開リポジトリー
     context: コード
+  - original: Edit Pins
+    translated: ピンを編集
+    context: ボタン
+  - original: Unwatch
+    translated: ウォッチ中
+    context: ボタン
