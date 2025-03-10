@@ -1,8 +1,10 @@
 active: true
 domains:
-  - description: GitHub UI の日本語翻訳
-    domain: github.com
-    enabled: true
+  - domain: github.com
     name: GitHub UI 翻訳
     repository: >-
       https://raw.githubusercontent.com/223n-tech/github-translation/refs/heads/master/translation-config-github.yml
+    contextMapping: >-
+      https://raw.githubusercontent.com/223n-tech/github-translation/refs/heads/master/context-mapping.yml
+    description: GitHub UI の日本語翻訳
+    enabled: true
