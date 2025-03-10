@@ -1,7 +1,7 @@
 site: github.com
 language: 日本語
 description: GitHub UIの日本語翻訳
-version: 0.12.0
+version: 0.12.1
 author: 223n
 last_updated: '2025-03-09'
 
@@ -373,7 +373,7 @@ translations:
     regex: true
   
   - original: Terms
-    translated: aaa
+    translated: 規約
     context: フッター
   - original: Privacy
     translated: プライバシー
