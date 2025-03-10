@@ -1,7 +1,7 @@
 site: github.com
 language: 日本語
 description: GitHub UIの日本語翻訳
-version: 0.9.0
+version: 0.10.0
 author: 223n
 last_updated: '2025-03-09'
 
@@ -187,6 +187,14 @@ translations:
   - original: Create new...
     translated: 新規作成...
     context: ボタン
+  - original: (\d+) Branch
+    translated: $1 ブランチ
+    context: ボタン
+    regex: true
+  - original: (\d+) Tags
+    translated: $1 タグ
+    context: ボタン
+    regex: true
   
   # 特殊要素
   - original: Actions
