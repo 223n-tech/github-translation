@@ -1,7 +1,7 @@
 site: github.com
 language: 日本語
 description: GitHub UIの日本語翻訳
-version: 0.11.0
+version: 0.12.0
 author: 223n
 last_updated: '2025-03-09'
 
@@ -11,20 +11,21 @@ last_updated: '2025-03-09'
 # 同じテキストでも表示場所によって翻訳を変え分けたい場合に有効です。
 # 
 # 主要なcontext値:
-# - メインナビゲーション: ヘッダー部分のグローバルナビゲーション
-# - リポジトリタブ: リポジトリページのタブメニュー
-# - プロフィール: ユーザープロフィールページの要素
-# - アクションタブ: Actionsページのタブ
-# - プロジェクトタブ: Projectsページのタブ
-# - ボタン: 各種ボタン要素
-# - 特殊要素: 特別な処理が必要なUI要素
-# - 課題表示: Issue関連の表示
-# - ラベル: ラベル表示テキスト
-# - 検索条件: 検索フィルター関連
-# - コード: コードビュー関連
-# - ファイルメニュー: ファイル操作メニュー
-# - 日時表示: 日付や時間の表示形式
-# - 文字列: 一般的なテキスト
+# - メインナビゲーション  : ヘッダー部分のグローバルナビゲーション
+# - リポジトリタブ        : リポジトリページのタブメニュー
+# - プロフィール          : ユーザープロフィールページの要素
+# - アクションタブ        : Actionsページのタブ
+# - プロジェクトタブ      : Projectsページのタブ
+# - ボタン                : 各種ボタン要素
+# - 特殊要素              : 特別な処理が必要なUI要素
+# - 課題表示              : Issue関連の表示
+# - ラベル                : ラベル表示テキスト
+# - 検索条件              : 検索フィルター関連
+# - コード                : コードビュー関連
+# - ファイルメニュー      : ファイル操作メニュー
+# - 日時表示              : 日付や時間の表示形式
+# - 文字列                : 一般的なテキスト
+# - フッター              : フッター要素
 #
 # context値は空文字列("")にもできます。その場合は全ての場所に適用されます。
 
@@ -344,38 +345,58 @@ translations:
     translated: 開かれている（$1件）
     context: プルリクエスト
     regex: true
-  
   - original: (\d+) Closed
     translated: 閉じられている（$1件）
     context: プルリクエスト
     regex: true
-  
+
   # リポジトリ統計情報
   - original: (\d+) stars
     translated: $1 お気に入り
     context: コード
     regex: true
-  
   - original: (\d+) forks
     translated: $1 フォーク
     context: コード
     regex: true
-  
   - original: (\d+) watching
     translated: $1 ウォッチ
     context: コード
     regex: true
-  
   - original: (\d+) Branch
     translated: $1 ブランチ
     context: コード
     regex: true
-  
   - original: (\d+) Tags
     translated: $1 タグ
     context: コード
     regex: true
   
+  - original: Terms
+    translated: aaa
+    context: フッター
+  - original: Privacy
+    translated: プライバシー
+    context: フッター
+  - original: Security
+    translated: セキュリティー
+    context: フッター
+  - original: Status
+    translated: ステータス
+    context: フッター
+  - original: Docs
+    translated: ドキュメント
+    context: Contact
+  - original: 問合せ
+    translated: ステータス
+    context: フッター
+  - original: Manage cookies
+    translated: Cookieの設定
+    context: フッター
+  - original: Do not share my personal information
+    translated: 私の情報を共有しないでください
+    context: フッター
+
   # コンテキスト無視の全体適用翻訳（全ての場所で使用される共通の翻訳）
   # コンテキストを空文字列("")にするとすべての場所で適用されます
   - original: All
